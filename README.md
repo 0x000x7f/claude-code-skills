@@ -1,4 +1,6 @@
-# my-claude-skills
+# claude-code-skills
+
+📖 **English** | [日本語](README.ja.md)
 
 Personal [Claude Code](https://claude.com/claude-code) skills I actually run.
 
