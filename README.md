@@ -29,6 +29,14 @@ So the enhanced version adds five guardrails. The highest-leverage one:
 
 Method and full results: [docs/grilling-ab-test.md](docs/grilling-ab-test.md).
 
+## `zenn` — turn a Claude Code session into a reviewed Zenn draft
+
+A manual-only publishing workflow for GitHub-connected Zenn repositories. It deduplicates topics, drafts the article, reuses the repository's own validation, registers the article as `published: false`, and flips it to `published: true` only after explicit human approval.
+
+The public version is intentionally sanitized: it contains no machine-specific paths, account names, secrets, or personal workflow details.
+
+Run it with `/zenn`.
+
 ## Install
 
 Copy a skill folder into your personal skills directory:
@@ -36,9 +44,10 @@ Copy a skill folder into your personal skills directory:
 ```sh
 cp -r skills/grill       ~/.claude/skills/grill
 cp -r skills/grill-deep  ~/.claude/skills/grill-deep
+cp -r skills/zenn        ~/.claude/skills/zenn
 ```
 
-Restart Claude Code if the command doesn't appear yet, then run `/grill` or `/grill-deep`.
+Restart Claude Code if the command doesn't appear yet, then run `/grill`, `/grill-deep`, or `/zenn`.
 
 ## Credit
 
