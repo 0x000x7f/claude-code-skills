@@ -29,6 +29,15 @@
 
 手法と全結果: [docs/grilling-ab-test.md](docs/grilling-ab-test.md)
 
+
+## `zenn` — Claude Codeの作業をレビュー可能なZenn下書きにする
+
+GitHub連携したZennリポジトリ向けの、手動起動専用の執筆・公開ワークフローです。既存記事との重複確認、下書き作成、リポジトリ既存の検査、`published: false` のままGitHubへ登録、明示承認後のみ `published: true` へ切り替えるところまでを手順化しています。
+
+公開版はサニタイズ済みで、端末固有のパス、アカウント名、秘密情報、個人的な運用情報は含めていません。
+
+`/zenn` で起動します。
+
 ## インストール
 
 スキルのフォルダを個人スキルディレクトリにコピー:
@@ -36,9 +45,10 @@
 ```sh
 cp -r skills/grill       ~/.claude/skills/grill
 cp -r skills/grill-deep  ~/.claude/skills/grill-deep
+cp -r skills/zenn        ~/.claude/skills/zenn
 ```
 
-コマンドが出てこない場合は Claude Code を再起動し、`/grill` または `/grill-deep` を実行。
+コマンドが出てこない場合は Claude Code を再起動し、`/grill`、`/grill-deep`、または `/zenn` を実行。
 
 ## クレジット
 
