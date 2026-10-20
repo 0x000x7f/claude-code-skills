@@ -37,6 +37,31 @@ The public version is intentionally sanitized: it contains no machine-specific p
 
 Run it with `/zenn`.
 
+### Install only the Zenn skill
+
+You do not need to clone the whole repository.
+
+macOS / Linux:
+
+```sh
+mkdir -p ~/.claude/skills/zenn
+curl -fsSL \
+  https://raw.githubusercontent.com/0x000x7f/claude-code-skills/main/skills/zenn/SKILL.md \
+  -o ~/.claude/skills/zenn/SKILL.md
+```
+
+Windows PowerShell:
+
+```powershell
+New-Item -ItemType Directory -Force "$HOME\.claude\skills\zenn" | Out-Null
+
+Invoke-WebRequest `
+  "https://raw.githubusercontent.com/0x000x7f/claude-code-skills/main/skills/zenn/SKILL.md" `
+  -OutFile "$HOME\.claude\skills\zenn\SKILL.md"
+```
+
+Restart Claude Code if `/zenn` does not appear immediately.
+
 ## Install
 
 Copy a skill folder into your personal skills directory:
