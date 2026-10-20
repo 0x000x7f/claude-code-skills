@@ -38,6 +38,31 @@ GitHub連携したZennリポジトリ向けの、手動起動専用の執筆・�
 
 `/zenn` で起動します。
 
+### Zennスキルだけ入れる
+
+リポジトリ全体をcloneする必要はありません。
+
+macOS / Linux:
+
+```sh
+mkdir -p ~/.claude/skills/zenn
+curl -fsSL \
+  https://raw.githubusercontent.com/0x000x7f/claude-code-skills/main/skills/zenn/SKILL.md \
+  -o ~/.claude/skills/zenn/SKILL.md
+```
+
+Windows PowerShell:
+
+```powershell
+New-Item -ItemType Directory -Force "$HOME\.claude\skills\zenn" | Out-Null
+
+Invoke-WebRequest `
+  "https://raw.githubusercontent.com/0x000x7f/claude-code-skills/main/skills/zenn/SKILL.md" `
+  -OutFile "$HOME\.claude\skills\zenn\SKILL.md"
+```
+
+`/zenn` がすぐに出てこない場合は Claude Code を再起動してください。
+
 ## インストール
 
 スキルのフォルダを個人スキルディレクトリにコピー:
